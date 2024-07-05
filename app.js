@@ -55,3 +55,15 @@ const productos = [
     img: "https://acdn.mitiendanube.com/stores/001/075/480/products/zapatillas-nike-air-max-270-react-ao4971-0021-920381d692f87f7a8116757957007956-640-0.jpg",
   },
 ];
+
+let carrito = [];
+
+productos.forEach((product)=>{
+    let content = document.createElement("div");
+    content.innerHTML = `  
+        <img src = "${product.img}">
+        <h3>${product.nombre}</h3>
+        <p>${product.talle}</p>
+        <p>${product.precio} $</p>
+    `;
+})
