@@ -70,4 +70,8 @@ productos.forEach((product)=>{
     `;
 
     shopContent.append(content);
+
+    let comprar = document.createElement("button");
+    comprar.innerText = "comprar";
+    content.appendChild(comprar);
 })
