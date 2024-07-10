@@ -11,6 +11,7 @@ const productos = [
   {
     id: 2,
     nombre: "Nike Air force 1'07 ",
+    talle: 36-40,
     precio: 60000,
     img: "https://nikearprod.vtexassets.com/arquivos/ids/699261/DD8959_100_A_PREM.jpg?v=638229666028100000 ",
   },
