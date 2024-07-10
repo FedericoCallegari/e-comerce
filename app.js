@@ -17,7 +17,19 @@ productos.forEach((product)=>{
     shopContent.append(content);
 
     let comprar = document.createElement("button");
+
     comprar.innerText = "comprar";
     comprar.className ="comprar";
     content.appendChild(comprar);
+
+    comprar.addEventListener('click', ()=>{
+      carrito.push({
+        id : product.id,
+        img : product.img,
+        nombre : product.nombre,
+        precio : product.precio
+      })
+      console.log(carrito);
+    })
 })
+
