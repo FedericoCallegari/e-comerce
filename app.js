@@ -1,3 +1,5 @@
+const shopContent =document.getElementById("shopContent");
+
 const productos = [
   {
     id: 1,
@@ -66,4 +68,6 @@ productos.forEach((product)=>{
         <p>${product.talle}</p>
         <p>${product.precio} $</p>
     `;
+
+    shopContent.append(content);
 })
