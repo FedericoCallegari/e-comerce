@@ -46,4 +46,17 @@ verCarrito.addEventListener("click", ()=>{
   modalButton.className = "modal-header-button"
 
   modalHeader.append(modalButton);
+
+  carrito.forEach((product) => {
+    let carritoContent = document.createElement("div");
+    carritoContent.className = "modal-content";
+    carritoContent.innerHTML = `
+      <img src = "${product.img}">
+      <h3>${product.nombre}</h3>
+      <p>${product.precio} $ </p>
+    `;
+    modalContainer.append(carritoContent);
+  })
+  
+
 })
