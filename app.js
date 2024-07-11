@@ -35,6 +35,12 @@ productos.forEach((product)=>{
 })
 
 verCarrito.addEventListener("click", ()=>{
+  //Limpio el modal container 
+  modalContainer.innerHTML = "";
+
+  //Abro mi modalContainer
+  modalContainer.style.display = "flex";
+
   const modalHeader = document.createElement("div");
   modalHeader.className = "modal-header";
   modalHeader.innerHTML = ` 
@@ -44,6 +50,12 @@ verCarrito.addEventListener("click", ()=>{
   const modalButton = document.createElement("h1");
   modalButton.innerText = "X";
   modalButton.className = "modal-header-button"
+
+  // Oculto mi modalContainer
+  modalButton.addEventListener("click",()=>{
+    modalContainer.style.display = "none" ;
+  });
+
 
   modalHeader.append(modalButton);
 
