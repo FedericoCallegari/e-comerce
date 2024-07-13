@@ -31,8 +31,15 @@
         <p>${product.precio} $ </p>
       `;
       modalContainer.append(carritoContent);
+
+      let eliminar = document.createElement("span");
+      eliminar.innerText = "❌";
+      eliminar.className = "delete-product";
+      carritoContent.append(eliminar)
     });
     
+
+
     const total = carrito.reduce((acc, el)=> acc + el.precio, 0);
   
     const totalBuying = document.createElement("div");
@@ -42,3 +49,4 @@
     }
     
     verCarrito.addEventListener("click", pintarCarrito);
+
