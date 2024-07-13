@@ -5,6 +5,7 @@ const productos = [
       talle:"41 - 45",
       precio: 50000,
       img: "https://reebokarg.vtexassets.com/arquivos/ids/212063-800-800?v=638419355996300000&width=800&height=800&aspect=true",
+      cantidad: 1,
     },
     {
       id: 2,
@@ -12,6 +13,7 @@ const productos = [
       talle: "36 - 40",
       precio: 60000,
       img: "https://nikearprod.vtexassets.com/arquivos/ids/699261/DD8959_100_A_PREM.jpg?v=638229666028100000 ",
+      cantidad: 1,
     },
     {
       id: 3,
@@ -19,6 +21,7 @@ const productos = [
       talle: "41 - 47",
       precio: 189000,
       img: "https://www.tripstore.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/D/H/DH5111-100_0_16.jpg",
+      cantidad: 1,
     },
     {
       id: 4,
@@ -26,6 +29,7 @@ const productos = [
       talle: "41 - 45",
       precio: 390000,
       img: "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/D/Z/DZ4784-304_0_8.jpg",
+      cantidad: 1,
     },
     {
       id: 5,
@@ -33,6 +37,7 @@ const productos = [
       talle: "41 - 45",
       precio: 239000,
       img: "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw16bf4c87/products/NIDV7721-001/NIDV7721-001-6.JPG",
+      cantidad: 1,
     },
     {
       id: 6,
@@ -40,6 +45,7 @@ const productos = [
       talle: "41 - 45",
       precio: 60000,
       img: "https://nikearprod.vtexassets.com/arquivos/ids/699261/DD8959_100_A_PREM.jpg?v=638229666028100000 ",
+      cantidad: 1,
     },
     {
       id: 7,
@@ -47,6 +53,7 @@ const productos = [
       talle: "41 - 45",
       precio: 200000,
       img: "https://nikearprod.vtexassets.com/arquivos/ids/731907/DZ2522_100_A_PREM.jpg?v=638308289486970000",
+      cantidad: 1,
     },
     {
       id: 8,
@@ -54,5 +61,6 @@ const productos = [
       talle: "41 - 45",
       precio: 30000,
       img: "https://acdn.mitiendanube.com/stores/001/075/480/products/zapatillas-nike-air-max-270-react-ao4971-0021-920381d692f87f7a8116757957007956-640-0.jpg",
+      cantidad: 1,
     },
   ];

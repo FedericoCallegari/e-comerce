@@ -35,10 +35,11 @@
       let eliminar = document.createElement("span");
       eliminar.innerText = "❌";
       eliminar.className = "delete-product";
-      carritoContent.append(eliminar)
+      carritoContent.append(eliminar);
+
+      eliminar.addEventListener("click", eliminarProducto)
     });
     
-
 
     const total = carrito.reduce((acc, el)=> acc + el.precio, 0);
   
@@ -50,3 +51,13 @@
     
     verCarrito.addEventListener("click", pintarCarrito);
 
+    const eliminarProducto = ()=>{
+      const foundId = carrito.find((element)=>element.id);
+
+      carrito = carrito.filter((carritoId) => {
+        return carritoId !== foundId
+      });
+
+      pintarCarrito();
+
+    }
