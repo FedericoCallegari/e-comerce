@@ -1,10 +1,9 @@
 
-    //Limpio el modal container 
+    const pintarCarrito = ()=> {
+      //Limpio el modal container 
     modalContainer.innerHTML = "";
-  
     //Abro mi modalContainer
     modalContainer.style.display = "flex";
-  
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = ` 
@@ -40,3 +39,5 @@
     totalBuying.className = "total-content";
     totalBuying.innerHTML = `total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
+    }
+    
