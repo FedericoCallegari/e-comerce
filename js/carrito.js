@@ -41,3 +41,4 @@
     modalContainer.append(totalBuying);
     }
     
+    verCarrito.addEventListener("click", pintarCarrito);
