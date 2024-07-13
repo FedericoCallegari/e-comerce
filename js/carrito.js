@@ -1,4 +1,4 @@
-verCarrito.addEventListener("click", ()=>{
+
     //Limpio el modal container 
     modalContainer.innerHTML = "";
   
@@ -40,4 +40,3 @@ verCarrito.addEventListener("click", ()=>{
     totalBuying.className = "total-content";
     totalBuying.innerHTML = `total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
-  });
