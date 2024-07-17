@@ -45,6 +45,9 @@ productos.forEach((product)=>{
       
       
       console.log(carrito);
+
+      // Esta funcion se ejecuta cada vez que agrego un producto.
+      carritoCounter();
     });
 });
 
