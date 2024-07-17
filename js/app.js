@@ -13,6 +13,7 @@ productos.forEach((product)=>{
         <h3>${product.nombre}</h3>
         <p>${product.talle}</p>
         <p class="price">${product.precio} $</p>
+        <p> Cantidad: ${product.cantidad}</p>
     `;
 
     shopContent.append(content);
@@ -24,13 +25,25 @@ productos.forEach((product)=>{
     content.appendChild(comprar);
 
     comprar.addEventListener('click', ()=>{
-      carrito.push({
-        id : product.id,
-        img : product.img,
-        nombre : product.nombre,
-        precio : product.precio
-      })
+      const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+      if(repeat){
+        carrito.map((prod)=>{
+          if(prod.id === product.id){
+            prod.cantidad++
+          };
+        });
+      }else{
+        carrito.push({
+          id : product.id,
+          img : product.img,
+          nombre : product.nombre,
+          precio : product.precio,
+          cantidad: product.cantidad,
+        });
+      }
+      
+      
       console.log(carrito);
-    })
-})
+    });
+});
 
