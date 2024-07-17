@@ -34,6 +34,8 @@
       `;
       modalContainer.append(carritoContent);
 
+      console.log(carrito.length);
+
       let eliminar = document.createElement("span");
       eliminar.innerText = "❌";
       eliminar.className = "delete-product";
