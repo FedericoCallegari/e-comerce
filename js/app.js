@@ -9,10 +9,8 @@ const getProducts = async ()=>{
   const response = await fetch("data.json");
   const data = await response.json();
   console.log(data);
-}
-getProducts();
-
-productos.forEach((product)=>{
+  
+  data.forEach((product)=>{
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `  
@@ -56,6 +54,9 @@ productos.forEach((product)=>{
       saveLocal();
     });
 });
+}
+getProducts();
+
 
 
 
