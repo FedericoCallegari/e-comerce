@@ -155,3 +155,9 @@ right: 14px;
 position: absolute;
 display: none;
 }
+.sumar{
+  cursor: pointer;
+}
+.restar{
+  cursor: pointer;
+}

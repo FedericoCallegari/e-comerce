@@ -29,12 +29,18 @@
         <img src = "${product.img}">
         <h3>${product.nombre}</h3>
         <p>${product.precio} $ </p>
+        <span class="restar"> - </span>
         <p>Cantidad: ${product.cantidad}</p>
+        <span class="sumar"> + </span>
         <p>Total: ${product.cantidad * product.precio} </p>
       `;
       modalContainer.append(carritoContent);
 
-      console.log(carrito.length);
+
+let restar = carritoContent.querySelector(".restar");
+restar.addEventListener("click", ()=>{
+  product.cantidad--;
+})
 
       let eliminar = document.createElement("span");
       eliminar.innerText = "❌";
@@ -63,6 +69,7 @@
       });
 
       pintarCarrito();
+      saveLocal();
       carritoCounter();
     };
 
@@ -74,3 +81,5 @@
       localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
       cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
     };
+
+    carritoCounter();
