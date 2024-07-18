@@ -66,7 +66,11 @@
       carritoCounter();
     };
 
+      // Add to my carrito counter getItem
     const carritoCounter = () =>{
       cantidadCarrito.style.display = "block";
-      cantidadCarrito.innerText = carrito.length;
-    }
+      const carritoLength = carrito.length;
+      // setItem("KEY", VALUE)
+      localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+      cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+    };
