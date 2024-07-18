@@ -19,7 +19,6 @@
       modalContainer.style.display = "none" ;
     });
   
-  
     modalHeader.append(modalButton);
   
     carrito.forEach((product) => {
@@ -33,11 +32,13 @@
         <p>Cantidad: ${product.cantidad}</p>
         <span class="sumar"> + </span>
         <p>Total: ${product.cantidad * product.precio} </p>
+        <span class="delete-product">❌</span>;
       `;
       modalContainer.append(carritoContent);
 
 
 let restar = carritoContent.querySelector(".restar");
+
 restar.addEventListener("click", ()=>{
   if(product.cantidad !==1){
     product.cantidad--;
@@ -53,15 +54,21 @@ sumar.addEventListener("click", ()=>{
   };
   saveLocal();
   pintarCarrito();
-})
+});
 
-      let eliminar = document.createElement("span");
-      eliminar.innerText = "❌";
-      eliminar.className = "delete-product";
-      carritoContent.append(eliminar);
+let eliminar = carritoContent.querySelector(".delete-product");
 
-      eliminar.addEventListener("click", eliminarProducto)
-    });
+eliminar.addEventListener("click", ()=>{
+  eliminarProducto(product.id);
+});
+
+      // let eliminar = document.createElement("span");
+      // eliminar.innerText = "❌";
+      // eliminar.className = "delete-product";
+      // carritoContent.append(eliminar);
+
+      // eliminar.addEventListener("click", eliminarProducto)
+});
     
 
     const total = carrito.reduce((acc, el)=> acc + el.precio * el.cantidad, 0);
@@ -74,16 +81,17 @@ sumar.addEventListener("click", ()=>{
     
     verCarrito.addEventListener("click", pintarCarrito);
 
-    const eliminarProducto = ()=>{
-      const foundId = carrito.find((element)=>element.id);
-
+    const eliminarProducto = (productId)=>{
+      const foundId = carrito.find((element) => element.id === productId);
+      console.log(foundId);
+      
       carrito = carrito.filter((carritoId) => {
-        return carritoId !== foundId
+        return carritoId !== foundId;
       });
 
-      pintarCarrito();
-      saveLocal();
       carritoCounter();
+      saveLocal();
+      pintarCarrito();
     };
 
       // Add to my carrito counter getItem
