@@ -14,7 +14,6 @@ productos.forEach((product)=>{
         <h3>${product.nombre}</h3>
         <p>${product.talle}</p>
         <p class="price">${product.precio} $</p>
-        <p> Cantidad: ${product.cantidad}</p>
     `;
 
     shopContent.append(content);
