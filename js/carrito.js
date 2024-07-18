@@ -39,7 +39,20 @@
 
 let restar = carritoContent.querySelector(".restar");
 restar.addEventListener("click", ()=>{
-  product.cantidad--;
+  if(product.cantidad !==1){
+    product.cantidad--;
+  }
+  saveLocal();
+  pintarCarrito();
+})
+
+let sumar = carritoContent.querySelector(".sumar");
+sumar.addEventListener("click", ()=>{
+  if(product.cantidad !== 0){
+    product.cantidad++;
+  };
+  saveLocal();
+  pintarCarrito();
 })
 
       let eliminar = document.createElement("span");
