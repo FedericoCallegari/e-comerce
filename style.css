@@ -161,3 +161,60 @@ display: none;
 .restar{
   cursor: pointer;
 }
+.button-comprar{
+  padding: 10px ;
+  margin-bottom: 20px;
+  width: 8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(160, 160, 160);
+  transition: background-color 0.5s ease;
+}
+.button-comprar:hover{
+  background-color: white;
+}
+
+
+.compra-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgba(105, 96, 96, 0.417);
+  color: #fff;
+  outline: 1px solid red;
+}
+.pago-main{
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid red;
+  background-color: #0000003b;
+}
+.center-modal {
+  top: 0;
+  left: 0;
+}
+
+.header-container{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+}
+.pagos-header-button{
+  display: flex;
+}
+
+.modal-form-content{
+  width: 40rem;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  outline: 1px solid red;
+}

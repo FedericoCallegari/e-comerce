@@ -1,14 +1,20 @@
 const shopContent =document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container")
+
 const cantidadCarrito = document.getElementById("cantidadCarrito")
 
 
 let carrito =   JSON.parse(localStorage.getItem("carrito"))||[];
 const getProducts = async ()=>{
+
+  
+
+
+
   const response = await fetch("data.json");
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   
   data.forEach((product)=>{
     let content = document.createElement("div");
